@@ -36,4 +36,12 @@ public class MyStack {
     public INode peak() {
         return myLinkedList.head;
     }
+
+    /**
+     * Added Pop method which will call the Linkedlist's pop method.
+     * this will delete the 1st element of the stack.
+     */
+    public void pop() {
+        myLinkedList.pop();
+    }
 }
