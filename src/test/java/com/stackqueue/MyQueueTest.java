@@ -23,4 +23,23 @@ public class MyQueueTest {
         INode peak = myQueue.peak();
         Assertions.assertEquals(myFirstNode,peak);
     }
+    /**
+     * this method will check the dequeue method.
+     */
+    @Test
+    public void given3NumberWhenDeletedToQueueShouldHaveLastAddedNode() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyQueue myQueue = new MyQueue();
+        myQueue.enqueue(myFirstNode);
+        myQueue.enqueue(mySecondNode);
+        myQueue.enqueue(myThirdNode);
+        myQueue.dequeue();
+        myQueue.printQueue();
+        myQueue.dequeue();
+        myQueue.printQueue();
+        INode peak = myQueue.peak();
+        Assertions.assertEquals(myThirdNode,peak);
+    }
 }
